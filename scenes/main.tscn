@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/ButtonEmployees.gd" type="Script" id=1]
+[ext_resource path="res://scripts/ButtonDepartments.gd" type="Script" id=2]
+
+[node name="main" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="ButtonDepartments" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -98.5
+margin_top = -28.0
+margin_right = 98.5
+margin_bottom = 28.0
+text = "department"
+script = ExtResource( 2 )
+
+[node name="ButtonEmployees" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -98.0
+margin_top = -404.0
+margin_right = 99.0
+margin_bottom = -348.0
+text = "employees"
+script = ExtResource( 1 )
+
+[connection signal="pressed" from="Control/ButtonDepartments" to="Control/ButtonDepartments" method="_on_ButtonDepartments_pressed"]
+[connection signal="pressed" from="Control/ButtonEmployees" to="Control/ButtonEmployees" method="_on_ButtonEmployees_pressed"]
